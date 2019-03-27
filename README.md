@@ -9,7 +9,7 @@ Using the gem
 
 ### Using via Gem Respository
 
-To use the gem via Vibes Pro-Serv private repository, add the following line to your Gemfile
+To use the gem via github, add the following line to your Gemfile
 
 ```ruby
 gem 'vibes_api', git: 'https://github.com/vibes/vibes_api_ruby'
