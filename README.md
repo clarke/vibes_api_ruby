@@ -1,6 +1,6 @@
 Vibes Api Gem
 ====================
-Ruby gem for the Vibes Api, utility classes for accessing various Vibes API endpoints. 
+Ruby gem for the Vibes Api, providing utility classes for accessing various Vibes API endpoints. 
 For more information: https://developer.vibes.com/display/APIs/Platform+Docs
 
 
