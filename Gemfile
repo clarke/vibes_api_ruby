@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'faraday'
 gem 'json'
-gem 'nokogiri'
+gem "nokogiri", ">= 1.8.5"
 gem 'xml-simple'
 gem 'pry'
 gem 'activesupport'
@@ -23,5 +23,5 @@ end
 
 group :doc do
   gem 'colorize', require: false
-  gem 'yard', require: false
+  gem "yard", ">= 0.9.11", require: false
 end
