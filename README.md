@@ -1,6 +1,7 @@
 Vibes Api Gem
 ====================
-Ruby gem for the Vibes Api utility class for accessing various Vibes API endpoints including Platform, Vibes Apps, and MobileDB.
+Ruby gem for the Vibes Api, utility classes for accessing various Vibes API endpoints. 
+For more information: https://developer.vibes.com/display/APIs/Platform+Docs
 
 
 Using the gem
@@ -11,7 +12,7 @@ Using the gem
 To use the gem via Vibes Pro-Serv private repository, add the following line to your Gemfile
 
 ```ruby
-gem 'vibes_api', source: "xxxxxxx" 
+gem 'vibes_api', git: 'https://github.com/vibes/vibes_api_ruby'
 ```
 
 Then run:
