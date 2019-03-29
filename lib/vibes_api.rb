@@ -47,16 +47,6 @@ class VibesApi
   MOBILE_DB_HOSTNAME = 'https://public-api.vibescm.com'
 
   ##
-  # Trust API for URL Shortening API
-  ##
-  VIBES_TRUSTAPI_HOSTNAME = 'https://externalapps.vibesapps.com'
-
-  ##
-  # Company Key of Vibes account (helpful for testing)
-  ##
-  VIBES_COMPANY_KEY = ''
-
-  ##
   # Hash for carrier code to carrier name lookup
   ##
   carrier_file = File.exists?(File.expand_path("#{Dir.pwd}/config/carrier_codes.yml")) ?
