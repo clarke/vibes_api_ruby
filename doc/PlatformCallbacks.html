@@ -6,7 +6,7 @@
 <title>
   Class: PlatformCallbacks
   
-    &mdash; Documentation by YARD 0.9.5
+    &mdash; Documentation by YARD 0.9.18
   
 </title>
 
@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -58,8 +58,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="class_list.html"></iframe>
 
       <div id="content"><h1>Class: PlatformCallbacks
   
@@ -349,7 +347,7 @@ specified company).</p>
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="ApiMethods.html" title="ApiMethods (module)">ApiMethods</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="ApiMethods.html#api_connection-instance_method" title="ApiMethods#api_connection (method)">api_connection</a></span>, <span class='object_link'><a href="ApiMethods.html#api_version-instance_method" title="ApiMethods#api_version (method)">api_version</a></span>, <span class='object_link'><a href="ApiMethods.html#apply_defaults%21-instance_method" title="ApiMethods#apply_defaults! (method)">apply_defaults!</a></span>, <span class='object_link'><a href="ApiMethods.html#content_type-instance_method" title="ApiMethods#content_type (method)">content_type</a></span>, <span class='object_link'><a href="ApiMethods.html#delete-instance_method" title="ApiMethods#delete (method)">delete</a></span>, <span class='object_link'><a href="ApiMethods.html#get-instance_method" title="ApiMethods#get (method)">get</a></span>, <span class='object_link'><a href="ApiMethods.html#hostname-instance_method" title="ApiMethods#hostname (method)">hostname</a></span>, <span class='object_link'><a href="ApiMethods.html#parse-instance_method" title="ApiMethods#parse (method)">parse</a></span>, <span class='object_link'><a href="ApiMethods.html#password-instance_method" title="ApiMethods#password (method)">password</a></span>, <span class='object_link'><a href="ApiMethods.html#post-instance_method" title="ApiMethods#post (method)">post</a></span>, <span class='object_link'><a href="ApiMethods.html#proxy-instance_method" title="ApiMethods#proxy (method)">proxy</a></span>, <span class='object_link'><a href="ApiMethods.html#put-instance_method" title="ApiMethods#put (method)">put</a></span>, <span class='object_link'><a href="ApiMethods.html#username-instance_method" title="ApiMethods#username (method)">username</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="ApiMethods.html#api_connection-instance_method" title="ApiMethods#api_connection (method)">api_connection</a></span>, <span class='object_link'><a href="ApiMethods.html#api_version-instance_method" title="ApiMethods#api_version (method)">api_version</a></span>, <span class='object_link'><a href="ApiMethods.html#apply_defaults!-instance_method" title="ApiMethods#apply_defaults! (method)">apply_defaults!</a></span>, <span class='object_link'><a href="ApiMethods.html#content_type-instance_method" title="ApiMethods#content_type (method)">content_type</a></span>, <span class='object_link'><a href="ApiMethods.html#delete-instance_method" title="ApiMethods#delete (method)">delete</a></span>, <span class='object_link'><a href="ApiMethods.html#get-instance_method" title="ApiMethods#get (method)">get</a></span>, <span class='object_link'><a href="ApiMethods.html#hostname-instance_method" title="ApiMethods#hostname (method)">hostname</a></span>, <span class='object_link'><a href="ApiMethods.html#parse-instance_method" title="ApiMethods#parse (method)">parse</a></span>, <span class='object_link'><a href="ApiMethods.html#password-instance_method" title="ApiMethods#password (method)">password</a></span>, <span class='object_link'><a href="ApiMethods.html#post-instance_method" title="ApiMethods#post (method)">post</a></span>, <span class='object_link'><a href="ApiMethods.html#proxy-instance_method" title="ApiMethods#proxy (method)">proxy</a></span>, <span class='object_link'><a href="ApiMethods.html#put-instance_method" title="ApiMethods#put (method)">put</a></span>, <span class='object_link'><a href="ApiMethods.html#username-instance_method" title="ApiMethods#username (method)">username</a></span></p>
 
 
   <div id="class_method_details" class="method_details_list">
@@ -549,7 +547,7 @@ specified company)</p>
       <pre class="code"><span class="info file"># File 'lib/platform_callbacks.rb', line 95</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
-  <span class='const'>MobileDb</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/config/callbacks/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
+  <span class='const'><span class='object_link'><a href="MobileDb.html" title="MobileDb (class)">MobileDb</a></span></span><span class='period'>.</span><span class='id identifier rubyid_post'><span class='object_link'><a href="ApiMethods.html#post-instance_method" title="ApiMethods#post (method)">post</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/config/callbacks/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1168,7 +1166,7 @@ specified company)</p>
       <pre class="code"><span class="info file"># File 'lib/platform_callbacks.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_callback_id'>callback_id</span><span class='rparen'>)</span>
-  <span class='const'>MobileDb</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/config/callbacks/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_callback_id'>callback_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='const'><span class='object_link'><a href="MobileDb.html" title="MobileDb (class)">MobileDb</a></span></span><span class='period'>.</span><span class='id identifier rubyid_delete'><span class='object_link'><a href="ApiMethods.html#delete-instance_method" title="ApiMethods#delete (method)">delete</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/config/callbacks/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_callback_id'>callback_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1399,7 +1397,7 @@ specified company)</p>
       <pre class="code"><span class="info file"># File 'lib/platform_callbacks.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='rparen'>)</span>
-  <span class='const'>MobileDb</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/config/callbacks/</span><span class='tstring_end'>&quot;</span></span>
+  <span class='const'><span class='object_link'><a href="MobileDb.html" title="MobileDb (class)">MobileDb</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="ApiMethods.html#get-instance_method" title="ApiMethods#get (method)">get</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/config/callbacks/</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1411,9 +1409,9 @@ specified company)</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Mar 26 17:25:56 2019 by
+  Generated on Thu Mar 28 22:19:36 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.4.2).
+  0.9.18 (ruby-2.4.2).
 </div>
 
     </div>
