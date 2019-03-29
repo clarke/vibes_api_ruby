@@ -3,7 +3,7 @@ require 'pry'
 require 'spec_helper'
 
 # MobileDb specs/tests
-describe PlatformCallbacks do
+describe Vibes::PlatformCallbacks do
 
   let(:company_key)          { "A1b2C3" }
   let(:subscription_list_id) { "10" }
@@ -14,7 +14,7 @@ describe PlatformCallbacks do
 
   describe ".subscription_added" do
     it "should call the callback API with correct payload" do
-      MobileDb.expects(:post).with(
+      Vibes::MobileDb.expects(:post).with(
         includes(company_key),
         all_of(
           includes('subscription_added'),
@@ -22,13 +22,13 @@ describe PlatformCallbacks do
           includes(destination_url)
         )
       ).returns(test_response)
-      PlatformCallbacks.create_subscription_added( company_key, subscription_list_id, destination_url)
+      Vibes::PlatformCallbacks.create_subscription_added( company_key, subscription_list_id, destination_url)
     end
   end
 
   describe "subscription_removed" do
     it "should call the Callbacks API with correct payload" do
-      MobileDb.expects(:post).with(
+      Vibes::MobileDb.expects(:post).with(
         includes(company_key),
         all_of(
           includes('subscription_removed'),
@@ -36,13 +36,13 @@ describe PlatformCallbacks do
           includes(destination_url)
         )
       ).returns(test_response)
-      PlatformCallbacks.create_subscription_removed( company_key, subscription_list_id, destination_url)
+      Vibes::PlatformCallbacks.create_subscription_removed( company_key, subscription_list_id, destination_url)
     end
   end
 
   describe "ack_participant_changed" do
     it "should call the Callbacks API with correct payload" do
-      MobileDb.expects(:post).with(
+      Vibes::MobileDb.expects(:post).with(
         includes(company_key),
         all_of(
           includes('ack_participant_changed'),
@@ -50,13 +50,13 @@ describe PlatformCallbacks do
           includes(destination_url)
         )
       ).returns(test_response)
-      PlatformCallbacks.create_participant_changed( company_key, acquisition_id, destination_url)
+      Vibes::PlatformCallbacks.create_participant_changed( company_key, acquisition_id, destination_url)
     end
   end
 
   describe "ack_participant_added" do
     it "should call the Callbacks API with correct payload" do
-      MobileDb.expects(:post).with(
+      Vibes::MobileDb.expects(:post).with(
         includes(company_key),
         all_of(
           includes('ack_participant_added'),
@@ -64,26 +64,26 @@ describe PlatformCallbacks do
           includes(destination_url)
         )
       ).returns(test_response)
-      PlatformCallbacks.create_participant_added( company_key, acquisition_id, destination_url)
+      Vibes::PlatformCallbacks.create_participant_added( company_key, acquisition_id, destination_url)
     end
   end
 
   describe "list_Callbacks" do
     it "should call the Callbacks API with correct payload" do
-      MobileDb.expects(:get).with(includes(company_key)).returns(test_response)
-      PlatformCallbacks.list(company_key)
+      Vibes::MobileDb.expects(:get).with(includes(company_key)).returns(test_response)
+      Vibes::PlatformCallbacks.list(company_key)
     end
   end
 
   describe "delete_callback" do
     it "should call the Callbacks API with correct payload" do
-      MobileDb.expects(:delete).with(
+      Vibes::MobileDb.expects(:delete).with(
         all_of(
           includes(company_key),
           includes(callback_id)
         )
       ).returns(test_response)
-      PlatformCallbacks.delete(company_key, callback_id)
+      Vibes::PlatformCallbacks.delete(company_key, callback_id)
     end
   end
 
@@ -141,15 +141,15 @@ describe PlatformCallbacks do
 
     describe '.find_callback_for' do
       before(:each) do
-        PlatformCallbacks.expects(:list).returns(mixed_callbacks)
+        Vibes::PlatformCallbacks.expects(:list).returns(mixed_callbacks)
       end
 
       it 'finds a callback by list_id' do
-        expect(PlatformCallbacks.find_callback_for(company_key, subscription_added_identifier)).to eq([subscription_added_callback])
+        expect(Vibes::PlatformCallbacks.find_callback_for(company_key, subscription_added_identifier)).to eq([subscription_added_callback])
       end
 
       it 'finds a callback by acq_key' do
-        expect(PlatformCallbacks.find_callback_for(company_key, ack_participant_changed_identifier)).to eq([ack_participant_changed_callback])
+        expect(Vibes::PlatformCallbacks.find_callback_for(company_key, ack_participant_changed_identifier)).to eq([ack_participant_changed_callback])
       end
     end
 
@@ -157,24 +157,24 @@ describe PlatformCallbacks do
       let(:new_url) { 'http://my-new-url.com' }
 
       before(:each) do
-        PlatformCallbacks.stubs(:delete)
-        PlatformCallbacks.stubs(:create)
+        Vibes::PlatformCallbacks.stubs(:delete)
+        Vibes::PlatformCallbacks.stubs(:create)
       end
 
       describe 'for all callback types' do
         describe 'finding the callback' do
-          before(:each) { PlatformCallbacks.stubs(:delete) }
+          before(:each) { Vibes::PlatformCallbacks.stubs(:delete) }
 
           it 'uses .find_callback_for w/ correct args' do
-            PlatformCallbacks.expects(:find_callback_for).with(company_key, subscription_added_identifier).returns([subscription_added_callback])
+            Vibes::PlatformCallbacks.expects(:find_callback_for).with(company_key, subscription_added_identifier).returns([subscription_added_callback])
 
-            PlatformCallbacks.change_url(company_key, subscription_added_identifier, new_url)
+            Vibes::PlatformCallbacks.change_url(company_key, subscription_added_identifier, new_url)
           end
         end
 
         describe 'deleting the existing callback' do
           before(:each) do
-            PlatformCallbacks.stubs(:find_callback_for)
+            Vibes::PlatformCallbacks.stubs(:find_callback_for)
                                .with(company_key, subscription_added_identifier)
                                .returns([subscription_added_callback])
           end
@@ -182,61 +182,61 @@ describe PlatformCallbacks do
           let(:subscription_added_callback_id) { subscription_added_callback['callback_id'] }
 
           it 'uses the delete method w/ correct args' do
-            PlatformCallbacks.expects(:delete).with(company_key, subscription_added_callback_id)
+            Vibes::PlatformCallbacks.expects(:delete).with(company_key, subscription_added_callback_id)
 
-            PlatformCallbacks.change_url(company_key, subscription_added_identifier, new_url)
+            Vibes::PlatformCallbacks.change_url(company_key, subscription_added_identifier, new_url)
           end
         end
       end
 
       describe 'specific to callback type' do
         before(:each) do
-          PlatformCallbacks.stubs(:find_callback_for)
+          Vibes::PlatformCallbacks.stubs(:find_callback_for)
                              .with(company_key, subscription_added_identifier)
                              .returns([subscription_added_callback])
 
-          PlatformCallbacks.stubs(:find_callback_for)
+          Vibes::PlatformCallbacks.stubs(:find_callback_for)
                              .with(company_key, subscription_removed_identifier)
                              .returns([subscription_removed_callback])
 
-          PlatformCallbacks.stubs(:find_callback_for)
+          Vibes::PlatformCallbacks.stubs(:find_callback_for)
                              .with(company_key, ack_participant_changed_identifier)
                              .returns([ack_participant_changed_callback])
 
-          PlatformCallbacks.stubs(:find_callback_for)
+          Vibes::PlatformCallbacks.stubs(:find_callback_for)
                              .with(company_key, ack_participant_added_identifier)
                              .returns([ack_participant_added_callback])
         end
 
         describe 'changing a subscription_added callback' do
           it 'calls create_subscription_added w/ correct arguments' do
-            PlatformCallbacks.expects(:create_subscription_added).with(company_key, subscription_added_identifier, new_url)
+            Vibes::PlatformCallbacks.expects(:create_subscription_added).with(company_key, subscription_added_identifier, new_url)
 
-            PlatformCallbacks.change_url(company_key, subscription_added_identifier, new_url)
+            Vibes::PlatformCallbacks.change_url(company_key, subscription_added_identifier, new_url)
           end
         end
 
         describe 'changing a subscription_removed callback' do
           it 'calls create_subscription_removed w/ correct args' do
-            PlatformCallbacks.expects(:create_subscription_removed).with(company_key, subscription_removed_identifier, new_url)
+            Vibes::PlatformCallbacks.expects(:create_subscription_removed).with(company_key, subscription_removed_identifier, new_url)
 
-            PlatformCallbacks.change_url(company_key, subscription_removed_identifier, new_url)
+            Vibes::PlatformCallbacks.change_url(company_key, subscription_removed_identifier, new_url)
           end
         end
 
         describe 'changing a ack_participant_changed callback' do
           it 'calls create_participant_changed w/ correct args' do
-            PlatformCallbacks.expects(:create_participant_changed).with(company_key, ack_participant_changed_identifier, new_url)
+            Vibes::PlatformCallbacks.expects(:create_participant_changed).with(company_key, ack_participant_changed_identifier, new_url)
 
-            PlatformCallbacks.change_url(company_key, ack_participant_changed_identifier, new_url)
+            Vibes::PlatformCallbacks.change_url(company_key, ack_participant_changed_identifier, new_url)
           end
         end
 
         describe 'changing a ack_participant_added callback' do
           it 'calls create_participant_added w/ correct args' do
-            PlatformCallbacks.expects(:create_participant_added).with(company_key, ack_participant_added_identifier, new_url)
+            Vibes::PlatformCallbacks.expects(:create_participant_added).with(company_key, ack_participant_added_identifier, new_url)
 
-            PlatformCallbacks.change_url(company_key, ack_participant_added_identifier, new_url)
+            Vibes::PlatformCallbacks.change_url(company_key, ack_participant_added_identifier, new_url)
           end
         end
       end

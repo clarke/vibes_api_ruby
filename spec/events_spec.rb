@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 # MobileDb specs/tests
-describe Events do
+describe Vibes::Events do
 
   let(:company_key) { 'A1b2C3' }
   let(:company_id) { '12345' }
@@ -14,7 +14,7 @@ describe Events do
   # catapult_hostname
   describe 'hostname' do
     it 'should return URL of Vibes Public API hostname' do
-      expect(Events.hostname).to eq 'https://public-api.vibescm.com'
+      expect(Vibes::Events.hostname).to eq 'https://public-api.vibescm.com'
     end
   end
 
@@ -22,8 +22,8 @@ describe Events do
     it "should call the events API with correct payload" do
       endpoint = "/companies/#{company_key}/events"
       body = { event_type: event_type, event_data: event_data, debug_data: debug_data }.to_json
-      Events.expects(:post).with(endpoint, body).returns(test_response)
-      expect(Events.create_event( company_key, event_type, event_data, debug_data)).to eq(test_response)
+      Vibes::Events.expects(:post).with(endpoint, body).returns(test_response)
+      expect(Vibes::Events.create_event( company_key, event_type, event_data, debug_data)).to eq(test_response)
     end
   end
 
@@ -31,24 +31,24 @@ describe Events do
     it "should call the events API with correct payload and event_id" do
       endpoint = "/companies/#{company_key}/events"
       body = { event_type: event_type, event_data: event_data, debug_data: debug_data, event_id: event_id }.to_json
-      Events.expects(:post).with(endpoint, body).returns(test_response)
-      expect(Events.create_event( company_key, event_type, event_data, debug_data, event_id)).to eq(test_response)
+      Vibes::Events.expects(:post).with(endpoint, body).returns(test_response)
+      expect(Vibes::Events.create_event( company_key, event_type, event_data, debug_data, event_id)).to eq(test_response)
     end
   end
 
   describe "get_event" do
     it "should retrieve all listed events for a company" do
       endpoint = "/MessageRouter/event/companies/#{company_id}/types"
-      Events.expects(:get).returns(test_response)
-      expect(Events.get_events( company_id )).to eq(test_response)
+      Vibes::Events.expects(:get).returns(test_response)
+      expect(Vibes::Events.get_events( company_id )).to eq(test_response)
     end
   end
 
   describe "delete_event" do
     it "should delete an event for a company" do
       endpoint = "/MessageRouter/event/companies/#{company_id}/types"
-      Events.expects(:delete).returns(test_response)
-      expect(Events.delete_event( company_id, 'delete_me' )).to eq(test_response)
+      Vibes::Events.expects(:delete).returns(test_response)
+      expect(Vibes::Events.delete_event( company_id, 'delete_me' )).to eq(test_response)
     end
   end
 

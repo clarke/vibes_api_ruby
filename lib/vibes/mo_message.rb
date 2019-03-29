@@ -14,15 +14,19 @@
 # @attr attemptNumber [String] MO message delivery attempt number
 #
 ##
-class MoMessage
-  include SAXMachine
+module Vibes
 
-  element :source,      value: :address, as: :mdn
-  element :source,      value: :carrier, as: :carrier
-  element :destination, value: :address, as: :short_code
-  element :message
-  element :messageId
-  element :receiptDate
-  element :attemptNumber
+  class MoMessage
+    include SAXMachine
 
+    element :source, value: :address, as: :mdn
+    element :source, value: :carrier, as: :carrier
+    element :destination, value: :address, as: :short_code
+    element :message
+    element :messageId
+    element :receiptDate
+    element :attemptNumber
+
+  end
 end
+
