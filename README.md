@@ -62,8 +62,6 @@ This will open up an IRB session with the current Vibes Api gem and ENV vars in 
 Generating Documentation
 --------------------
 
-It customary to document all methods and global variables within the Vibes Api project.
-
 The project utilizes the [YARD](http://yardoc.org/) documentation tool and conventions.
 
 To generate the documentation for the project run:
