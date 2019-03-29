@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version     = VibesApi::VERSION
 
   s.summary     = 'Ruby library to interface with various Vibes APIs'
-  s.description = 'Generally used by the Professional Services team, this library is leverged to interact with the Vibes Platform and other APIs'
+  s.description = 'Generally used by the Professional Services team, this library is available to interact with the Vibes Platform and other APIs'
 
   s.authors     = ['Vibes Professional Services']
   s.email       = 'msg-tech@vibes.com'

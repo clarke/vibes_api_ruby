@@ -99,7 +99,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/mobile_db.rb</dd>
+    <dd>lib/vibes/mobile_db.rb</dd>
   </dl>
   
 </div>
@@ -713,7 +713,7 @@ campaign.</p>
 93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_add_person'>add_person</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_fields'>custom_fields</span><span class='comma'>,</span> <span class='id identifier rubyid_mobile_phone'>mobile_phone</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_vibes_api_version'>check_vibes_api_version</span><span class='lparen'>(</span><span class='id identifier rubyid_mobile_phone'>mobile_phone</span><span class='rparen'>)</span>
@@ -794,7 +794,7 @@ proper E.164 international MDN format</p>
 23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_vibes_api_version'>check_vibes_api_version</span><span class='lparen'>(</span><span class='id identifier rubyid_mdn'>mdn</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_api_version'>api_version</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>&lt;</span> <span class='int'>2</span>
@@ -900,7 +900,7 @@ proper E.164 international MDN format</p>
 36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find_person'>find_person</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_mdn'>mdn</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_mdn'>mdn</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_vibes_api_version'>check_vibes_api_version</span><span class='lparen'>(</span><span class='id identifier rubyid_mdn'>mdn</span><span class='rparen'>)</span>
@@ -997,7 +997,7 @@ point to the specified Subscription List.</p>
 265</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 263</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 263</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_acquisition_campaign'>get_acquisition_campaign</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_acquisition_id'>acquisition_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/campaigns/acquisition/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_acquisition_id'>acquisition_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1093,7 +1093,7 @@ point to the specified Subscription List.</p>
 253</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 251</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 251</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_acquisition_campaigns'>get_acquisition_campaigns</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_subscription_list_id'>subscription_list_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/mobiledb/subscription_lists/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_subscription_list_id'>subscription_list_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/acquisition_campaigns</span><span class='tstring_end'>&quot;</span></span>
@@ -1188,7 +1188,7 @@ point to the specified Subscription List.</p>
 71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_external_person'>get_external_person</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_external_person_id'>external_person_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/mobiledb/persons/external/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_external_person_id'>external_person_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1283,7 +1283,7 @@ point to the specified Subscription List.</p>
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_person'>get_person</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/mobiledb/persons/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_person_id'>person_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1362,7 +1362,7 @@ point to the specified Subscription List.</p>
 59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_person_by_url'>get_person_by_url</span><span class='lparen'>(</span><span class='id identifier rubyid_person_url'>person_url</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='id identifier rubyid_person_url'>person_url</span>
@@ -1474,7 +1474,7 @@ subscription list in the company</p>
 218</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 216</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 216</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_person_if_subscribed_by_external_person_id'>get_person_if_subscribed_by_external_person_id</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_list_id'>list_id</span><span class='comma'>,</span> <span class='id identifier rubyid_external_person_id'>external_person_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/mobiledb/subscription_lists/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_list_id'>list_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/subscribers?external_person_id=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_external_person_id'>external_person_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1587,7 +1587,7 @@ list in the company</p>
 192</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 189</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 189</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_person_if_subscribed_by_mdn'>get_person_if_subscribed_by_mdn</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_list_id'>list_id</span><span class='comma'>,</span> <span class='id identifier rubyid_mdn'>mdn</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_mdn'>mdn</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_vibes_api_version'>check_vibes_api_version</span><span class='lparen'>(</span><span class='id identifier rubyid_mdn'>mdn</span><span class='rparen'>)</span>
@@ -1700,7 +1700,7 @@ subscription list in the company</p>
 205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 203</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 203</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_person_if_subscribed_by_person_id'>get_person_if_subscribed_by_person_id</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_list_id'>list_id</span><span class='comma'>,</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/mobiledb/subscription_lists/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_list_id'>list_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/subscribers?person_id=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_person_id'>person_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1795,7 +1795,7 @@ subscription list in the company</p>
 230</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 228</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 228</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_subscription_list'>get_subscription_list</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_subscription_list_id'>subscription_list_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/mobiledb/subscription_lists/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_subscription_list_id'>subscription_list_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1875,7 +1875,7 @@ specified company.</p>
 241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 239</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 239</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_subscription_lists'>get_subscription_lists</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/mobiledb/subscription_lists</span><span class='tstring_end'>&quot;</span></span>
@@ -1970,7 +1970,7 @@ specified company.</p>
 178</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 176</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 176</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_subscriptions'>get_subscriptions</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/mobiledb/persons/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_person_id'>person_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/subscriptions</span><span class='tstring_end'>&quot;</span></span>
@@ -2106,7 +2106,7 @@ specified company.</p>
 130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_subscribe'>subscribe</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_acquisition_id'>acquisition_id</span><span class='comma'>,</span> <span class='id identifier rubyid_mobile_phone'>mobile_phone</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_fields'>custom_fields</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_vibes_api_version'>check_vibes_api_version</span><span class='lparen'>(</span><span class='id identifier rubyid_mobile_phone'>mobile_phone</span><span class='rparen'>)</span>
@@ -2267,7 +2267,7 @@ campaign.</p>
 153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 143</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 143</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_subscribe_external_id'>subscribe_external_id</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_acquisition_id'>acquisition_id</span><span class='comma'>,</span> <span class='id identifier rubyid_mobile_phone'>mobile_phone</span><span class='comma'>,</span> <span class='id identifier rubyid_external_id'>external_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_fields'>custom_fields</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_vibes_api_version'>check_vibes_api_version</span><span class='lparen'>(</span><span class='id identifier rubyid_mobile_phone'>mobile_phone</span><span class='rparen'>)</span>
@@ -2386,7 +2386,7 @@ campaign.</p>
 166</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 164</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 164</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_unsubscribe'>unsubscribe</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span> <span class='id identifier rubyid_subscription_list_id'>subscription_list_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/mobiledb/persons/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_person_id'>person_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/subscriptions/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_subscription_list_id'>subscription_list_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -2416,7 +2416,7 @@ campaign.</p>
 110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_external_person'>update_external_person</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_external_person_id'>external_person_id</span><span class='comma'>,</span> <span class='id identifier rubyid_fields'>fields</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/mobiledb/persons/external/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_external_person_id'>external_person_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_fields'>fields</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
@@ -2527,7 +2527,7 @@ campaign.</p>
 106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_db.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_db.rb', line 104</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_person'>update_person</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_person_id'>person_id</span><span class='comma'>,</span> <span class='id identifier rubyid_fields'>fields</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/mobiledb/persons/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_person_id'>person_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_fields'>fields</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
@@ -2542,7 +2542,7 @@ campaign.</p>
 </div>
 
       <div id="footer">
-  Generated on Thu Mar 28 22:34:41 2019 by
+  Generated on Thu Mar 28 23:08:47 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.18 (ruby-2.4.2).
 </div>

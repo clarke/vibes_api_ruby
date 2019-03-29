@@ -99,7 +99,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/mobile_wallet.rb</dd>
+    <dd>lib/vibes/mobile_wallet.rb</dd>
   </dl>
   
 </div>
@@ -538,7 +538,7 @@ contain either :header_url or :image_url key.</p>
 101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_wallet.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_wallet.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create_generic_wallet_message'>create_generic_wallet_message</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_wallet_id'>wallet_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_filter_name'>filter_name</span><span class='comma'>,</span> <span class='id identifier rubyid_filter_selector'>filter_selector</span><span class='comma'>,</span> <span class='id identifier rubyid_filter_value'>filter_value</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='lbracket'>[</span><span class='symbol'>:template</span><span class='comma'>,</span> <span class='symbol'>:header</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
@@ -687,7 +687,7 @@ contain either :header_url or :image_url key.</p>
 116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_wallet.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_wallet.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create_wallet_message'>create_wallet_message</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_wallet_id'>wallet_id</span><span class='comma'>,</span> <span class='id identifier rubyid_group_code'>group_code</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_create_generic_wallet_message'>create_generic_wallet_message</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_wallet_id'>wallet_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>group_code</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>starts_with</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_group_code'>group_code</span><span class='rparen'>)</span>
@@ -846,7 +846,7 @@ contain either :header_url or :image_url key.</p>
 142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_wallet.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_wallet.rb', line 130</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create_wallet_message_by_time_window'>create_wallet_message_by_time_window</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_wallet_id'>wallet_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_window_start'>window_start</span><span class='comma'>,</span> <span class='id identifier rubyid_window_end'>window_end</span><span class='rparen'>)</span>
   <span class='comment'># this matches example at https://developer.vibes.com/display/APIs/Wallet+Manager+Messaging+APIs
@@ -998,7 +998,7 @@ contain either :header_url or :image_url key.</p>
 167</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_wallet.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_wallet.rb', line 155</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create_wallet_message_for_date'>create_wallet_message_for_date</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_wallet_id'>wallet_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_date'>date</span><span class='rparen'>)</span>
   <span class='comment'># this matches example at https://developer.vibes.com/display/APIs/Wallet+Manager+Messaging+APIs
@@ -1103,7 +1103,7 @@ contain either :header_url or :image_url key.</p>
 66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_wallet.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_wallet.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_wallet_campaign'>get_wallet_campaign</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_wallet_id'>wallet_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/campaigns/wallet/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_wallet_id'>wallet_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1182,7 +1182,7 @@ contain either :header_url or :image_url key.</p>
 54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_wallet.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_wallet.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_wallet_campaigns'>get_wallet_campaigns</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/campaigns/wallet</span><span class='tstring_end'>&quot;</span></span>
@@ -1293,7 +1293,7 @@ contain either :header_url or :image_url key.</p>
 29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_wallet.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_wallet.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_wallet_item'>get_wallet_item</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_wallet_id'>wallet_id</span><span class='comma'>,</span> <span class='id identifier rubyid_wallet_item_id'>wallet_item_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/campaigns/wallet/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_wallet_id'>wallet_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/items/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_wallet_item_id'>wallet_item_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1407,7 +1407,7 @@ contain either :header_url or :image_url key.</p>
 43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_wallet.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_wallet.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_wallet_items'>get_wallet_items</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_wallet_id'>wallet_id</span><span class='comma'>,</span> <span class='id identifier rubyid_group_code'>group_code</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_group_code'>group_code</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>?group_code=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_code'>group_code</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_group_code'>group_code</span>
@@ -1537,7 +1537,7 @@ contain either :header_url or :image_url key.</p>
 16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/mobile_wallet.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/mobile_wallet.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_wallet_item'>update_wallet_item</span><span class='lparen'>(</span><span class='id identifier rubyid_company_key'>company_key</span><span class='comma'>,</span> <span class='id identifier rubyid_wallet_id'>wallet_id</span><span class='comma'>,</span> <span class='id identifier rubyid_wallet_item_id'>wallet_item_id</span><span class='comma'>,</span> <span class='id identifier rubyid_fields'>fields</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/companies/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_company_key'>company_key</span><span class='embexpr_end'>}</span><span class='tstring_content'>/campaigns/wallet/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_wallet_id'>wallet_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/items/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_wallet_item_id'>wallet_item_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_fields'>fields</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
@@ -1552,7 +1552,7 @@ contain either :header_url or :image_url key.</p>
 </div>
 
       <div id="footer">
-  Generated on Thu Mar 28 22:34:41 2019 by
+  Generated on Thu Mar 28 23:08:47 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.18 (ruby-2.4.2).
 </div>

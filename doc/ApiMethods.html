@@ -83,7 +83,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/api_methods.rb</dd>
+    <dd>lib/vibes/api_methods.rb</dd>
   </dl>
   
 </div>
@@ -536,7 +536,7 @@
 82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/api_methods.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/api_methods.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_api_connection'>api_connection</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='comma'>,</span> <span class='id identifier rubyid_password'>password</span><span class='comma'>,</span> <span class='id identifier rubyid_proxy'>proxy</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_fail'>fail</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Vibes API: Username or Password missing. Check your environment variables.</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_username'>username</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='id identifier rubyid_password'>password</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -584,7 +584,7 @@
 31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/api_methods.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/api_methods.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_api_version'>api_version</span>
   <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>VIBES_PUBLIC_API_VERSION</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span>
@@ -677,7 +677,7 @@
 61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/api_methods.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/api_methods.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_apply_defaults!'>apply_defaults!</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:host</span><span class='rbracket'>]</span>          <span class='op'>||=</span> <span class='id identifier rubyid_hostname'>hostname</span>
@@ -724,7 +724,7 @@
 21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/api_methods.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/api_methods.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_content_type'>content_type</span>
   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>application/json</span><span class='tstring_end'>&#39;</span></span>
@@ -905,7 +905,7 @@
 213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/api_methods.rb', line 198</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/api_methods.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_apply_defaults!'>apply_defaults!</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
@@ -1100,7 +1100,7 @@
 114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/api_methods.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/api_methods.rb', line 98</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_apply_defaults!'>apply_defaults!</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
@@ -1155,7 +1155,7 @@
 6</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/api_methods.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/api_methods.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_hostname'>hostname</span>
   <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>VIBES_PUBLIC_API_URL</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://public-api.vibescm.com</span><span class='tstring_end'>&#39;</span></span>
@@ -1202,7 +1202,7 @@
 42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/api_methods.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/api_methods.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DEBUG_API_CALLS</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
@@ -1249,7 +1249,7 @@
 16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/api_methods.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/api_methods.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_password'>password</span>
   <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>VIBES_PUBLIC_API_PASSWORD</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SPLAT_API_PASS</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
@@ -1463,7 +1463,7 @@
 148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/api_methods.rb', line 132</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/api_methods.rb', line 132</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_apply_defaults!'>apply_defaults!</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
@@ -1518,7 +1518,7 @@
 26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/api_methods.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/api_methods.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_proxy'>proxy</span>
   <span class='kw'>nil</span>
@@ -1732,7 +1732,7 @@
 182</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/api_methods.rb', line 166</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/api_methods.rb', line 166</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_apply_defaults!'>apply_defaults!</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
@@ -1787,7 +1787,7 @@
 11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/api_methods.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/vibes/api_methods.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_username'>username</span>
   <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>VIBES_PUBLIC_API_USERNAME</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SPLAT_API_USER</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
@@ -1802,7 +1802,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Mar 28 22:34:41 2019 by
+  Generated on Thu Mar 28 23:08:46 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.18 (ruby-2.4.2).
 </div>
