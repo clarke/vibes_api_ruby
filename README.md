@@ -44,15 +44,6 @@ Message API (Vibes Connect):
 
 * VIBES_MESSAGE_API_PASSWORD=xxx
 
-Url Shortener:
-
-* VIBES_TRUST_API_URL=https://trustapi.vibesapps.com
-
-* VIBES_TRUST_API_USERNAME=xxx
-
-* VIBES_TRUST_API_PASSWORD=xxx
-
-
 
 Interactive Console
 --------------------
