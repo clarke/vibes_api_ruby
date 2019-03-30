@@ -64,7 +64,7 @@ namespace :update do
       carrier_codes[code] = carrier_name
     end
 
-    IO.write(File.expand_path("../lib/yaml/carrier_codes.yml", __FILE__), carrier_codes.to_yaml, mode: "w+")
+    IO.write(File.expand_path("../lib/vibes/yaml/carrier_codes.yml", __FILE__), carrier_codes.to_yaml, mode: "w+")
     puts "#{carrier_codes.count} Carrier codes written"
   end
 end
