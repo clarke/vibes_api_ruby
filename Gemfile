@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'faraday'
 gem 'json'
-gem "nokogiri", ">= 1.8.5"
+gem "nokogiri", ">= 1.11.4"
 gem 'xml-simple'
 gem 'pry'
 gem 'activesupport'
