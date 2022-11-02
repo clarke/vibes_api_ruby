@@ -1,18 +1,19 @@
 source 'https://rubygems.org'
 
 gem 'faraday'
-gem 'json'
-gem "nokogiri", ">= 1.11.4"
+gem 'json', "~> 2.3.0"
+gem "nokogiri", "~> 1.11.4"
 gem 'xml-simple'
 gem 'pry'
-gem 'activesupport'
+gem 'activesupport', "~> 5.2.4.3"
 gem 'sax-machine'
 gem 'jwt'
+gem 'tzinfo', "~> 1.2.10"
 
 group :development do
   gem 'require_all'
   gem 'dotenv'
-  gem 'rake'
+  gem 'rake', "~> 12.3.3"
 end
 
 group :test do
@@ -23,5 +24,5 @@ end
 
 group :doc do
   gem 'colorize', require: false
-  gem "yard", ">= 0.9.11", require: false
+  gem "yard", "~> 0.9.20", require: false
 end
