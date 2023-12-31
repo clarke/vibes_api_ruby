@@ -5,7 +5,7 @@ gem 'json', "~> 2.3.0"
 gem "nokogiri", "~> 1.14.3"
 gem 'xml-simple'
 gem 'pry'
-gem 'activesupport', "~> 5.2.4.3"
+gem 'activesupport', "~> 6.1.7.3"
 gem 'sax-machine'
 gem 'jwt'
 gem 'tzinfo', "~> 1.2.10"
